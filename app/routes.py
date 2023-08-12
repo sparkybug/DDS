@@ -5,7 +5,8 @@ from app import app, openai_utils
 def embed_symptoms():
     user_input = request.json.get("userInput")
     embedded_input = openai_utils.embed_input(user_input)
-    return jsonify({'encoded_input': embedded_input})
+    return jsonify({'embedded_input': embedded_input})
+
 
 @app.route('/api/get-similar-symptoms/<int:disease_id>', methods=['GET'])
 def get_similar_symptoms(disease_id):

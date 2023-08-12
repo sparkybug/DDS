@@ -4,12 +4,21 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from app.models import Symptom
 
-openai.api_key = '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'
+openai.api_key = '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'
 
-def embed_input(user_input):
-    response = openai.Embedding.create(model="text-davinci-003", data=[user_input])
+def embed_input(user_input: list):
+    embeddings_dict = openai.Embedding.create(
+        input=user_input, 
+        model="text-embedding-ada-002")["data"]
+    
+    embeddings = []
 
-    return response.choices[0].text.strip()
+    for embedding in embeddings_dict:
+        embeddings.append(embedding["embedding"])
+
+    return embeddings
+    
+    # return response.choices[0].text.strip()
 
 def calculate_similarity(disease_id):
     data = request.get_json()
