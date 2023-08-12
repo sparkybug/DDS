@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from app.models import Symptom
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 def embed_input(user_input):
     response = openai.Embedding.create(model="text-davinci-003", data=[user_input])
