@@ -30,7 +30,9 @@ def predict_disease():
     with app.app_context():
         # Fetch symptoms and their embeddings
         symptoms = Symptom.query.all()
-        embedded_symptoms = [np.array(json.loads(symptom.embedded_description[1:-1], sep=', ')) for symptom in symptoms]
+        two_dim_symptoms = symptoms.reshape(-1, symptoms.shape[-1])
+
+        embedded_symptoms = [np.array(json.loads(symptom.embedded_description)) for symptom in two_dim_symptoms]
 
         # Calculate similarities
         similarities = [cosine_similarity([user_input_embedding], [symptom_embedding])[0][0]

@@ -18,7 +18,7 @@ def embed_input(user_input: list):
         embeddings.append(embedding["embedding"])
 
     # return jsonify(embeddings)
-    return json.dumps(embeddings)
+    return embeddings
     
     # return response.choices[0].text.strip()
 
@@ -58,12 +58,12 @@ def predict_disease_from_similarities(similarities):
 def get_disease_from_symptom_index(symptom_index):
     # mapping logic
     mapping = {
-        0: "Common Cold",
-        1: "Hypoglycemia",
-        2: "Malaria",
-        3: "peptic ulcer disease",
-        4: "Typhoid",
-        5: "Urinary tract infection",
-        6: "Depression"
+        1: "Common Cold",
+        2: "Hypoglycemia",
+        3: "Malaria",
+        4: "peptic ulcer disease",
+        5: "Typhoid",
+        6: "Urinary tract infection",
+        7: "Depression"
     }
     return mapping.get(symptom_index, "Unknown Disease")
