@@ -17,7 +17,7 @@ database = 'heroku_db25d753792fa31'
 # python function to connect to the mySQL db and return the SQLAlchemy engine object
 def get_connection():
     return create_engine(
-        url = "mysql+pymysql://{0}:{1}@{2}:{3}/{4}".format(
+        url = "mysql+pymysql://{0}:{1}@{2}/{3}".format(
         user,
         password,
         host,
