@@ -2,16 +2,17 @@ from sqlalchemy import create_engine
 
 class Config:
     SECRET_KEY = '8d4a54daa26ea319e39b6d44'
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:''@localhost/dds'
+    SQLALCHEMY_DATABASE_URI = 'mysql://b3223848c57ce9:bdbf90ed@us-cdbr-east-06.cleardb.net/heroku_db25d753792fa31?reconnect=true'
+    # 'mysql+pymysql://root:''@localhost/dds'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     OPENAI_API_KEY = ''
 
 # defining db credentials
-user = 'root'
-password = ''
-host = '127.0.0.1'
-port = 3306
-database = 'dds'
+user = 'b3223848c57ce9'
+password = 'bdbf90ed'
+host = 'us-cdbr-east-06.cleardb.net'
+# port = 3306
+database = 'heroku_db25d753792fa31'
 
 # python function to connect to the mySQL db and return the SQLAlchemy engine object
 def get_connection():
@@ -20,7 +21,6 @@ def get_connection():
         user,
         password,
         host,
-        port,
         database
         )
     )
