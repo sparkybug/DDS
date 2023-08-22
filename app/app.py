@@ -1,4 +1,5 @@
 from flask import Flask
+from app import app
 # from config import Config
 from flask_sqlalchemy import SQLAlchemy
 
