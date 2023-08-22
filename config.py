@@ -1,19 +1,10 @@
-# from flask import Flask
 from sqlalchemy import create_engine
-# from flask_sqlalchemy import SQLAlchemy
-# from config import db
-# from app.models import Disease, Symptom
-# from sqlalchemy.sql import func
-
-# app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:''@localhost/dds'
-# db = SQLAlchemy(app)
 
 class Config:
     SECRET_KEY = '8d4a54daa26ea319e39b6d44'
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:''@localhost/dds'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    OPENAI_API_KEY = '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'
+    OPENAI_API_KEY = ''
 
 # defining db credentials
 user = 'root'
@@ -42,5 +33,4 @@ if __name__ == '__main__':
     except Exception as ex:
         print("Connection could not be made due to the following error: \n", ex)
 
-# def populate_db(db):
     

@@ -16,5 +16,3 @@ class Symptom(db.Model):
     description = db.Column(db.String(511))
     embedded_description = db.Column(db.String(65211))
     disease_id = db.Column(db.Integer, db.ForeignKey('disease.id'))
-
-# from app import db
