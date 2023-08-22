@@ -6,13 +6,13 @@ from app import openai_utils
 from sklearn.metrics.pairwise import cosine_similarity
 from app.models import db, Symptom
 
-@app.route('/api/embed-symptoms', methods=['POST'])
+@app.route('/api/embed-symptoms/', methods=['POST'])
 def embed_symptoms():
     user_input = request.json.get("userInput")
     embedded_input = openai_utils.embed_input(user_input)
     return jsonify({'embedded_input': embedded_input})
 
-@app.route('/api/predict-disease', methods=['POST'])
+@app.route('/api/predict-disease/', methods=['POST'])
 def predict_disease():
     data = request.get_json()
     user_input = data.get("userInput", "")
