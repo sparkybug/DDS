@@ -2,10 +2,10 @@ from sqlalchemy import create_engine
 
 class Config:
     SECRET_KEY = '8d4a54daa26ea319e39b6d44'
-    SQLALCHEMY_DATABASE_URI = 'mysql://b3223848c57ce9:bdbf90ed@us-cdbr-east-06.cleardb.net/heroku_db25d753792fa31?reconnect=true'
+    SQLALCHEMY_DATABASE_URI = 'mysql://b3223848c57ce9:bdbf90ed@us-cdbr-east-06.cleardb.net/heroku_db25d753792fa31'
     # 'mysql+pymysql://root:''@localhost/dds'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    OPENAI_API_KEY = ''
+    OPENAI_API_KEY = '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'
 
 # defining db credentials
 user = 'b3223848c57ce9'
