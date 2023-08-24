@@ -20,7 +20,7 @@ def predict_disease():
     # Embed user input
     user_input_embedding = openai_utils.embed_input(user_input)
 
-    with app.app_context():
+    with api.app_context():
         # Fetch symptoms and their embeddings
         symptoms = Symptom.query.all()
         embedded_symptoms =[] 
