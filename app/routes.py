@@ -31,9 +31,11 @@ def predict_diseases():
         similarities = cosine_similarity(np.array([user_input_embedding]), np.array(embedded_symptoms))
 
         # Predict disease based on similarities
-        predicted_disease = openai_utils.ranker(similarities)
+        # predicted_disease = openai_utils.ranker(similarities)
+
+        return similarities
         
-        return jsonify({'predicted_disease': predicted_disease}), 200
+        # return jsonify({'predicted_disease': predicted_disease}), 200
     
         # print(similarities)
         # return jsonify({'similarities': similarities[0]})
