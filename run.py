@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route('/api/predict-disease/', methods=['POST'])
 def predict_disease():
-    predicted_disease = routes.predict_disease()
+    predicted_disease = routes.predict_diseases()
 
     return predicted_disease
 

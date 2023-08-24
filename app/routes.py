@@ -13,7 +13,7 @@ def embed_symptoms():
     return jsonify({'embedded_input': embedded_input})
 
 # @app.route('/api/predict-disease/', methods=['POST'])
-def predict_disease():
+def predict_diseases():
     data = request.get_json()
     user_input = data.get("userInput", "")
 
