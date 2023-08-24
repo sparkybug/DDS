@@ -3,13 +3,6 @@ from flask import Flask
 # from config import Config
 from flask_sqlalchemy import SQLAlchemy
 
-api = Flask(__name__)
-
-@api.route('/')
-def hello_world():
-    return 'Hello World!'
-
-if __name__ == '__main__':
-    api.run(debug=True)
+app = Flask(__name__)
 
 from app import routes, models
