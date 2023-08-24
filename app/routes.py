@@ -33,5 +33,6 @@ def predict_diseases():
         predicted_disease = openai_utils.ranker(similarities)
         
         return jsonify({'predicted_disease': predicted_disease}), 200
+    
         # print(similarities)
         # return jsonify({'similarities': similarities[0]})

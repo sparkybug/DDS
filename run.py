@@ -5,7 +5,7 @@ from app import routes, models
 def hello_world():
     return 'Hello World!'
 
-@app.route('/api/predict-disease/', methods=['POST'])
+@app.route('/api/predict-disease', methods=['POST'])
 def predict_disease():
     # predicted_disease = routes.predict_diseases()
 
