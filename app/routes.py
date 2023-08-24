@@ -1,18 +1,18 @@
 import json
 from flask import request, jsonify
 import numpy as np
-from app.app import app
+from app.app import api
 from app import openai_utils
 from sklearn.metrics.pairwise import cosine_similarity
 from app.models import db, Symptom
 
-@app.route('/api/embed-symptoms/', methods=['POST'])
+@api.route('/api/embed-symptoms/', methods=['POST'])
 def embed_symptoms():
     user_input = request.json.get("userInput")
     embedded_input = openai_utils.embed_input(user_input)
     return jsonify({'embedded_input': embedded_input})
 
-@app.route('/api/predict-disease/', methods=['POST'])
+@api.route('/api/predict-disease/', methods=['POST'])
 def predict_disease():
     data = request.get_json()
     user_input = data.get("userInput", "")
