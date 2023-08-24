@@ -34,7 +34,7 @@ def ranker(similarities):
         "Hypoglycemia",
         "Malaria",
         "peptic ulcer disease",
-        "Typhoid",
+        "The symptoms you described align with those of typhoid fever. Typhoid is caused by a bacterial infection and can lead to fever, weakness, stomach pain, and a range of other uncomfortable symptoms. It's important to address this condition promptly to ensure your recovery. The good news is that typhoid can be treated with appropriate medical care. Your healthcare provider will likely prescribe antibiotics to target the bacteria causing the infection. It's crucial to follow their instructions diligently and complete the full course of medication, even if you start feeling better. Additionally, staying hydrated and consuming a balanced diet can aid in your recovery process. Rest is also essential to help your body regain its strength. Please remember that recovery from typhoid takes time, and it's completely normal to feel fatigued during this period. If you experience any concerns or if your symptoms worsen, don't hesitate to reach out to your healthcare provider. They are there to address your questions and monitor your progress.",
         "Urinary tract infection",
         "Depression"
     ]
