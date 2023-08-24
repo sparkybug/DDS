@@ -8,7 +8,7 @@ def hello_world():
     return 'Hello World!'
 
 @app.route('/api/predict-disease', methods=['POST'])
-def predict_disease(similarities):
+def predict_disease():
     # predicted_disease = routes.predict_diseases()
     # Predict disease based on similarities
     similarities = routes.predict_diseases()
