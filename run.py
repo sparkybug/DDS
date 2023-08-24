@@ -1,5 +1,6 @@
 from app.app import app
 from app import routes, models 
+from app.models import db, Symptom
 
 @app.route('/')
 def hello_world():
