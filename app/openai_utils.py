@@ -34,9 +34,9 @@ def ranker(similarities):
         "Hypoglycemia",
         "Malaria",
         "peptic ulcer disease",
-         "Typhoid",
-         "Urinary tract infection",
-         "Depression"
+        "Typhoid",
+        "Urinary tract infection",
+        "Depression"
     ]
     idx = np.argpartition(similarities[0], -5, )[-5:]
     indices = idx[np.argsort((-similarities[0])[idx])]
