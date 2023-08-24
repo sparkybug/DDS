@@ -14,7 +14,7 @@ def predict_disease():
     similarities = routes.predict_diseases()
     predicted_disease = openai_utils.ranker(similarities)
 
-    return similarities  
+    return jsonify(similarities)  
     return jsonify({'predicted_disease': predicted_disease}), 200
     # return routes.predict_diseases()
 
