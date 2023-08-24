@@ -1,4 +1,3 @@
-from flask import jsonify
 from app.app import app
 from app import routes, models 
 
@@ -10,7 +9,7 @@ def hello_world():
 def predict_disease():
     predicted_disease = routes.predict_disease()
 
-    return jsonify({'predicted_disease': predicted_disease}), 200
+    return predicted_disease
 
 if __name__ == '__main__':
     app.run(debug=True)  
