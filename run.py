@@ -9,7 +9,7 @@ def hello_world():
 def predict_disease():
     # predicted_disease = routes.predict_diseases()
 
-    return routes.predict_diseases
+    return routes.predict_diseases()
 
 if __name__ == '__main__':
     app.run(debug=True)  
