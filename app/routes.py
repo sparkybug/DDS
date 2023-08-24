@@ -23,6 +23,7 @@ def predict_diseases():
     with app.app_context():
         # Fetch symptoms and their embeddings
         symptoms = Symptom.query.all()
+        print(symptoms)
         embedded_symptoms =[] 
         [embedded_symptoms.append(np.array(json.loads(symptom.embedded_description))) for symptom in symptoms]
 
