@@ -28,7 +28,7 @@ def predict_disease_from_similarities(similarities):
     return "Unknown Disease"
 
 def ranker(similarities):
-    threshold_value = 0.8  # Setting threshold value
+    threshold_value = 0.7  # Setting threshold value
     symptoms =[
         "Common Cold",
         "Hypoglycemia",
