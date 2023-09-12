@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from app.models import Symptom
 
-openai.api_key = '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'
+openai.api_key = ''
 
 def embed_input(user_input: list):
     combined_input = ' '.join(user_input)

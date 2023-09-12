@@ -5,7 +5,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'mysql://b3223848c57ce9:bdbf90ed@us-cdbr-east-06.cleardb.net/heroku_db25d753792fa31'
     # 'mysql+pymysql://root:''@localhost/dds'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    OPENAI_API_KEY = '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'
+    OPENAI_API_KEY = ''
 
 # defining db credentials
 user = 'b3223848c57ce9'
